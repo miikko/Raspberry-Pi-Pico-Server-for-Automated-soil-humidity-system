@@ -1,7 +1,12 @@
-from machine import Pin
+from machine import Pin, Timer
 
-led = Pin(25, Pin.OUT)
-# Turn led on
-led.value(1)
-# Turn led off
-led.value(0)
+gp_pin_num = 25
+led = Pin(gp_pin_num, Pin.OUT)
+tim = Timer()
+
+def tick(_):
+    global led
+    led.toggle()
+    print("Toggle LED")
+
+tim.init(freq=1, mode=Timer.PERIODIC, callback=tick)
