@@ -31,3 +31,25 @@ To copy a MicroPython script `myfile.py` to Pico as `main.py`: `$ mpremote cp my
 If a MicroPython script is copied to the Pico with the name `main.py`, Pico will run it on any following startups. If the script is not meant to be executed during startup, it should be copied to the Pico with a different name.
 
 To remove copied files from Pico: `$ mpremote rm :<filename>`
+
+## 4. Connect Pico to ESP-01 module
+
+Connect the ESP-01 module containing the **ESP8266** Wi-Fi microchip to the Pico by following the wiring displayed in the diagram below.  
+
+**TODO**: Add connection diagram here. Should use colored cables to make it easier for readers to follow.
+
+# MicroPython scripts
+
+[`test_led.py`](test_led.py): Use for testing that MicroPython works properly on Pico. Executing the script causes the Pico's onboard led to start blinking.
+
+[`AT_terminal.py`](AT_terminal.py): Use for testing the connection between Pico and the ESP-01 module. Additionally, can be used to configure the ESP8266 Wi-Fi microchip through AT-commands. List for ESP8266 AT-commands can be found [here](https://www.electronicshub.org/esp8266-at-commands/). Executing the script turns the MicroPython REPL into an AT-terminal, where one can write AT-commands that get sent to the ESP8266.
+
+# Pinouts
+
+## Pico
+
+![Raspberry Pi Pico pinout](imgs/raspberry_pi_pico_pinout.png)
+
+## ESP-01
+
+![ESP-01 pinout](imgs/ESP-01_pinout.jpg)
