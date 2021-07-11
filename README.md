@@ -36,7 +36,7 @@ To remove copied files from Pico: `$ mpremote rm :<filename>`
 
 Connect the ESP-01 module containing the **ESP8266** Wi-Fi microchip to the Pico by following the wiring displayed in the diagram below.  
 
-**TODO**: Add connection diagram here. Should use colored cables to make it easier for readers to follow.
+![Wiring diagram showing how to connect Raspberry Pi Pico into the ESP-01](imgs/project_wiring_diagram.png)
 
 # MicroPython scripts
 
@@ -53,3 +53,7 @@ Connect the ESP-01 module containing the **ESP8266** Wi-Fi microchip to the Pico
 ## ESP-01
 
 ![ESP-01 pinout](imgs/ESP-01_pinout.jpg)
+
+# Credits
+
+This project was heavily inspired by [this Reddit post](https://www.reddit.com/r/raspberry_pi/comments/ld6ssg/giving_a_raspberry_pi_pico_internet_access_sort/).
